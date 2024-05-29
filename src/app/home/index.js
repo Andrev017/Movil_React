@@ -1,4 +1,5 @@
 import React from 'react';
+import { router } from 'expo-router';
 
 import { StyleSheet, View, Text,Image, TouchableOpacity } from 'react-native';
 
@@ -10,25 +11,31 @@ const Index = () => {
             </Text>
 
             <View style={styles.perfil}>
-                <Image source={require("../../../assets/perfilHome.png")} style={{color: "#2D0C57",}}/>
-                <Text>Nombre del Usuario</Text>
-                <TouchableOpacity style={styles.boton} onPress={() => router.push("/inicio/registro")}>
+                
+                    <Image source={require("../../../assets/perfilHome.png")} style={{color: "#2D0C57",marginHorizontal: 10,}}/>
+
+                    <Text style={{color: "#2D0C57",marginHorizontal: 10,}}>Nombre del Usuario</Text>
+                    <TouchableOpacity style={styles.boton} onPress={() => router.push("/home/usuario1")}>
+                        <Text style={{ textAlign: "center", color: "#fff", fontSize: 18 }}>Visitar</Text>
+                    </TouchableOpacity>
+            </View>
+
+            <Text></Text>
+
+            <View style={styles.perfil}>
+                <Image source={require("../../../assets/perfilHome.png")} style={{color: "#2D0C57",marginHorizontal: 10,}}/>
+                <Text style={{color: "#2D0C57",marginHorizontal: 10,}}>Nombre del Usuario</Text>
+                <TouchableOpacity style={styles.boton} onPress={() => router.push("/home/usuario1")}>
                     <Text style={{ textAlign: "center", color: "#fff", fontSize: 18 }}>Visitar</Text>
                 </TouchableOpacity>
             </View>
 
-            <View style={styles.perfil}>
-                <Image source={require("../../../assets/perfilHome.png")} style={{color: "#2D0C57",}}/>
-                <Text>Nombre del Usuario</Text>
-                <TouchableOpacity style={styles.boton} onPress={() => router.push("/inicio/registro")}>
-                    <Text style={{ textAlign: "center", color: "#fff", fontSize: 18 }}>Visitar</Text>
-                </TouchableOpacity>
-            </View>
+            <Text></Text>
 
             <View style={styles.perfil}>
-                <Image source={require("../../../assets/perfilHome.png")} style={{color: "#2D0C57",}}/>
-                <Text>Nombre del Usuario</Text>
-                <TouchableOpacity style={styles.boton} onPress={() => router.push("/inicio/registro")}>
+                <Image source={require("../../../assets/perfilHome.png")} style={{color: "#2D0C57",marginHorizontal: 10,}}/>
+                <Text style={{color: "#2D0C57",marginHorizontal: 10,}}>Nombre del Usuario</Text>
+                <TouchableOpacity style={styles.boton} onPress={() => router.push("/home/usuario1")}>
                     <Text style={{ textAlign: "center", color: "#fff", fontSize: 18 }}>Visitar</Text>
                 </TouchableOpacity>
             </View>
@@ -49,7 +56,7 @@ const styles = StyleSheet.create({
         backgroundColor:"#ccc",
         width:"90%",
         borderRadius: 50,
-        padding:"2%",
+        padding:"3%",
         marginHorizontal: 15,
     },
     boton:{
